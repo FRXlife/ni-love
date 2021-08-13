@@ -93,7 +93,7 @@ html{
 	transform: rotateX(-90deg) translateZ(50px);
 }
 /*鼠标移入后样式*/
-/* .cube:hover .out_front{
+.cube:hover .out_front{
 	transform: rotateY(0deg) translateZ(200px);
 }
 .cube:hover .out_back{
@@ -110,7 +110,7 @@ html{
 }
 .cube:hover .out_bottom{
 	transform: rotateX(-90deg) translateZ(200px);
-} */
+}
 
 /*鼠标点击后样式*/
 .cube.clickA .out_front{
