@@ -10,7 +10,7 @@
 		<!--/*外层最大容器*/-->
 		<div class="wrap">
 	<!--	/*包裹所有元素的容器*/-->
-		<div class="cube">
+		<div id="cube" class="cube" onclick="addStatus()">
 			<!--前面图片 -->
 			<div class="out_front">
 				<img src="img/1.jpg"  class="pic"/>
@@ -53,6 +53,29 @@
 			</span>
 		</div>
 		</div>
+		<script>
+			function addStatus() {
+				var cube = document.getElementById('cube');
+				if(hasClass(cube,"clickA")) {
+					removeClass(cube,"clickA");
+				}else{
+					addClass(cube,"clickA");
+				}
+			}
+			function hasClass( elements,cName ){
+        return !!elements.className.match( new RegExp( "(\\s|^)" + cName + "(\\s|$)") ); // ( \\s|^ ) 判断前面是否有空格 （\\s | $ ）判断后面是否有空格 两个感叹号为转换为布尔值 以方便做判断
+    	};
+			function addClass( elements,cName ){
+        if( !hasClass( elements,cName ) ){
+            elements.className += " " + cName;
+        };
+    	};
+			function removeClass( elements,cName ){
+        if( hasClass( elements,cName ) ){
+            elements.className = elements.className.replace( new RegExp( "(\\s|^)" + cName + "(\\s|$)" )," " ); // replace方法是替换
+        };
+    	};
+		</script>
 	</body>
 </html>
 
